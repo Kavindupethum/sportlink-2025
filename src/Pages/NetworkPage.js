@@ -1,6 +1,7 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";  // For the search icon
 import Sidebar from '../Components/TaskBar'; // Import your Sidebar component
+import Button from '../Components/ui/Button'; // Add this line at the top with your other imports
 
 const NetworkPage = () => {
   // Dummy data for network members
@@ -25,14 +26,14 @@ const NetworkPage = () => {
   ];
 
   return (
-    <div className="flex min-h-screen bg-gray-900 text-white">
+    <div className="flex min-h-screen bg-gray-800 text-white">
       {/* Sidebar */}
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 ml-[180px] p-6">
+      <div className="flex-1 p-6">
         {/* Top Bar */}
-        <div className="bg-black rounded-3xl p-4 flex justify-between items-center mb-8">
+        <div className="bg-black rounded-3xl p-3 flex justify-between items-center mb-8">
           <div className="relative flex-1 max-w-lg">
             <FaSearch className="absolute left-4 top-3 text-gray-500" />
             <input
@@ -42,9 +43,9 @@ const NetworkPage = () => {
             />
           </div>
           <div className="flex items-center gap-4">
-            <button className="bg-[#222] rounded-full p-3 text-white">
-              <span>Filters</span>
-            </button>
+            <Button variant="ghost" size="icon" className="bg-[#222] rounded-full h-22 w-22">
+                          <span>Filters</span>
+                        </Button>
           </div>
         </div>
 
@@ -55,7 +56,7 @@ const NetworkPage = () => {
             {networkMembers.map((member, index) => (
               <div
                 key={index}
-                className="bg-gray-800 p-6 rounded-xl flex flex-col items-center"
+                className="bg-black p-6 rounded-xl flex flex-col items-center"
               >
                 <div className="w-20 h-20 bg-red-600 rounded-full mb-4">
                   <img
@@ -105,7 +106,7 @@ const NetworkPage = () => {
             {suggestedUsers.map((user, index) => (
               <div
                 key={index}
-                className="flex justify-between items-center bg-gray-800 p-4 rounded-xl"
+                className="flex justify-between items-center bg-black p-4 rounded-xl"
               >
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gray-600 rounded-full">
@@ -128,49 +129,10 @@ const NetworkPage = () => {
           </div>
         </div>
 
-        {/* Live Chat Section */}
-        <div className="mt-12 bg-gray-800 p-6 rounded-xl">
-          <h2 className="text-3xl font-bold mb-6">Live Chat</h2>
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-600 rounded-full">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/67.jpg"
-                    alt="Profile"
-                    className="w-full h-full rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-lg font-medium text-white">BigDaddy</p>
-                  <p className="text-sm text-gray-400">Lorem ipsum?</p>
-                </div>
-              </div>
-              <span className="text-sm text-green-500">Active</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <div className="flex items-center space-x-4">
-                <div className="w-12 h-12 bg-gray-600 rounded-full">
-                  <img
-                    src="https://randomuser.me/api/portraits/men/68.jpg"
-                    alt="Profile"
-                    className="w-full h-full rounded-full object-cover"
-                  />
-                </div>
-                <div>
-                  <p className="text-lg font-medium text-white">NoobPlayer69</p>
-                  <p className="text-sm text-gray-400">
-                    Lorem ipsum dolor sit amet...
-                  </p>
-                </div>
-              </div>
-              <span className="text-sm text-gray-400">2h ago</span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
 };
 
 export default NetworkPage;
+
