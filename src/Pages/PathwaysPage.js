@@ -19,9 +19,9 @@ const PathwaysPage = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 ml-[180px] p-8">
+      <div className="flex-1 p-8">
         {/* Top Bar */}
-        <div className="bg-black rounded-3xl p-7 flex justify-between items-center mb-6">
+        <div className="bg-black rounded-3xl p-3 flex justify-between items-center mb-6">
           <div className="relative flex-1 max-w-lg">
             <FaSearch className="absolute left-4 top-3 text-gray-500" />
             <input
@@ -31,9 +31,17 @@ const PathwaysPage = () => {
             />
           </div>
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="icon" className="bg-[#222] rounded-full h-22 w-22">
+            <Button variant="ghost" size="icon" className="bg-red-600 rounded-full h-22 w-22">
               <span>Filters</span>
             </Button>
+            <Button
+      className="bg-red-600 text-white hover:bg-red-700 rounded-full px-4 py-2 flex items-center"
+      // onClick={() => setIsAddPostOpen(true)} // Uncomment and implement if you have a modal
+    >
+      {/* You can use an icon or text */}
+      Add 
+      {/* <FaPlus className="ml-2" /> */}
+    </Button>
           </div>
         </div>
 
