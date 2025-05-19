@@ -17,16 +17,15 @@ const HomePage = () => {
       <Sidebar />
 
       {/* Main Content */}
-      <div className="flex-1 bg-gray-800 p-8 lg:p-12 rounded-l-3xl ml-4 max-w-full overflow-auto relative">
-        {/* Top Bar */}
-        <div className="w-full bg-black p-4 rounded-3xl flex justify-between items-center mb-9 max-w-4xl mx-auto">
-          {/* Search Bar */}
-          <div className="flex items-center space-x-4 max-w-xl w-full">
-            <FaSearch className="text-white text-2xl" />
-            <Input
-              type="text"
-              placeholder="Search"
-              className="bg-gray-700 text-white py-3 rounded-full w-full focus:outline-none"
+            <div className="flex-1 p-8">
+              {/* Top Bar */}
+              <div className="bg-black rounded-3xl p-3 flex justify-between items-center mb-6">
+                <div className="relative flex-1 max-w-lg">
+                  <FaSearch className="absolute left-4 top-3 text-gray-500" />
+                  <input
+                    type="search"
+                    placeholder="Search"
+                    className="bg-[#222] border-none pl-12 py-3 w-full text-white rounded-full"
             />
           </div>
 
